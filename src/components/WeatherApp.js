@@ -9,7 +9,7 @@ function WeatherApp() {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=d37c6b33a72f8247e2f24ebf71082741&units=imperial`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&{YOUR API_KEY}`)
       .then(response => response.json())
       .then(data => {
         if (data.cod === 200) {
